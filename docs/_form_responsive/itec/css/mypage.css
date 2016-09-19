@@ -1,0 +1,480 @@
+﻿@charset "utf-8";
+
+html {
+	background: #fff;
+}
+
+/* ----------------------------------------
+
+container
+
+---------------------------------------- */
+
+/* headerMp
+------------------------------- */
+#headerMp {
+	padding: 0;
+	width: auto;
+	background: url(/files/img/mypage/bg_glb.png) repeat-x 0 100%;
+	-webkit-box-shadow: 0 2px 3px #ddd;
+	box-shadow: 0 2px 4px 1px #ddd;
+	margin-bottom: 29px;
+	border-bottom: none;
+}
+.hdrMpSec {
+	width: 930px;
+	margin: 0 auto;
+	position: relative;
+}
+#siteID {
+	margin-top: 31px;
+	float: left;
+	margin-left: -11px;
+	display: inline;
+	width: auto;
+}
+#gnavMp {
+	clear: both;
+	width: 930px;
+	margin: 0 auto 0;
+	height: 75px;
+	border-right: solid 1px #fff;
+	border-left: solid 1px #bebebe;
+}
+#gnavMp li {
+	float: left;
+	font-size: 15px;
+	color: #262626;
+	font-weight: bold;
+	text-align: center;
+	font-family: 'ヒラギノ角ゴ Pro W6',"Hiragino Kaku Gothic Pro","メイリオ",Meiryo;
+	background: url(/files/img/mypage/bg_glb_btn_off.png) repeat-x 0 100%;
+	border-right: solid 1px #bebebe;
+	border-left: solid 1px #fff;
+}
+#gnavMp li a.active,
+#gnavMp li a:hover {
+	background: url(/files/img/mypage/bg_glb_btn_on.png) repeat-x 0 100%;
+	padding-top: 24px;
+	height: 51px;
+}
+#gnavMp li a{
+	text-decoration: none;
+	display: inline-block;
+	padding-top: 23px;
+	height: 52px;
+}
+#gnavMp li.nav01 a{
+	width: 177px;
+}
+#gnavMp li.nav02 a{
+	width: 178px;
+}
+#gnavMp li.nav03 a{
+	width: 178px;
+}
+#gnavMp li.nav04 a{
+	width: 178px;
+}
+#gnavMp li.nav05 a{
+	width: 209px;
+}
+#gnavMp.gnavMp02 li a{
+	width: 223px;
+}
+#gnavMp.gnavMp03 li a{
+	width: 298px;
+}
+#hdrMp01 {
+	width: 220px;
+	float: right;
+	text-align: right;
+	margin-bottom: 20px;
+}
+#hdrMp01 li {
+	display: inline;
+}
+#hdrMp01 li img:hover{
+	opacity: 0.6;
+}
+#hdrMp02 {
+	width: 320px;
+	float: right;
+	text-align: right;
+	margin-bottom: 16px;
+}
+#hdrMp02 .btnBeginner img:hover{
+	opacity: 0.6;
+}
+#hdrMp02 .inCap {
+	font-size: 12px;
+	line-height: 20px;
+	color: #666;
+	padding: 5px 0 4px;
+}
+#hdrMp02 .hdrName {
+	font-size: 12px;
+	font-weight: 700;
+	display: inline;
+	line-height: 52px;
+	vertical-align: middle;
+	margin-right: 8px;
+}
+#hdrMp02 .hdrName span {
+	font-family: "メイリオ",Meiryo;
+	color: #000;
+	margin: 0 7px;
+}
+.btnBeginner {
+	display: inline;
+	vertical-align: middle;
+}
+
+/* contentMp
+------------------------------- */
+#contentMp {
+	width: 930px;
+	margin: 0 auto;
+}
+#main {
+	width: 700px;
+	float: right;
+}
+#subMp {
+	width: 200px;
+	float: left;
+}
+.mainBlock {
+	padding: 20px;
+	border-radius: 6px;
+}
+.subMenu {
+	border: 1px solid #bcbcbc;
+	border-radius: 3px;
+	font-weight: 700;
+}
+.subMenuTit{
+	font-weight: bold;
+	font-family: "ヒラギノ角ゴ Pro W6", "Hiragino Kaku Gothic Pro";
+	;
+	border-top-style: solid;
+	border-top-width: 3px;
+	font-size: 16px;
+	padding: 7px 10px 7.5px;
+	background: url(/files/img/mypage/bg_sub_menu.png) repeat-x 0 100%;
+}
+.subMenuTit span{
+	background: url(/files/img/mypage/icon_arrw_01.png) no-repeat left 5px;
+	padding-left:18px;
+}
+.subMenu > ul > li {
+	line-height: 1.5em;
+	border-bottom: 1px dotted #ccc;
+}
+.subMenu > ul > li:first-child{
+	border-top-width: 2px;
+	border-top-style: solid;
+}
+.subMenu > ul > li:last-child {
+	border-bottom: none;
+	padding-bottom: 1px;
+}
+.subMenu ul li a {
+	background: url(/files/img/mypage/icon_arrw_02.png) no-repeat left 10px;
+	display: block;
+	padding: 6px 0 0 15px;
+	text-decoration: none;
+	margin: 0 17px 6px;
+}
+
+
+/* footerMp
+------------------------------- */
+#footerMp {
+	background: #eeeeee;
+	color: #555;
+}
+#footerMp .inSec01 {
+	padding: 18px 0 25px;
+	background: #eeeeee;
+	background: -moz-linear-gradient(top, #eeeeee 0%, #f9f9f9 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#f9f9f9));
+	background: -webkit-linear-gradient(top, #eeeeee 0%,#f9f9f9 100%);
+	background: -o-linear-gradient(top, #eeeeee 0%,#f9f9f9 100%);
+	background: -ms-linear-gradient(top, #eeeeee 0%,#f9f9f9 100%);
+	background: linear-gradient(to bottom, #eeeeee 0%,#f9f9f9 100%);
+}
+#copyright {
+	text-align: center;
+}
+
+/* ----------------------------------------
+
+module
+
+---------------------------------------- */
+
+/* title
+------------------------------- */
+.boxTitle02 {
+	letter-spacing: 2px;
+	padding-left: 2px;
+}
+.boxTitle02 .icoSearch {
+	background: url(/files/img/mypage/icon_search.png) no-repeat 0 1px;
+	padding-left: 26px;
+}
+.boxTitle02 .icoShindan {
+	background: url(/files/img/mypage/icon_shindan.png) no-repeat 0 2px;
+	padding-left: 28px;
+	padding-top: 4px;
+}
+.titNews {
+	font-size: 16px;
+	font-weight: 700;
+	background: url(/files/img/mypage/icon_news.png) no-repeat 0 0;
+	padding-left: 26px;
+	padding-top: 1px;
+	line-height: 1.3;
+	margin-bottom: 5px;
+}
+.titCamp {
+	font-size: 16px;
+	font-weight: 700;
+	background: url(/files/img/mypage/icon_campaign.png) no-repeat 0 0;
+	padding-left: 22px;
+	padding-top: 2px;
+	line-height: 1.3;
+	margin-bottom: 5px;
+}
+.titPen {
+	font-weight: 700;
+	background: url(/files/img/mypage/icon_pen.png) no-repeat 0 0;
+	padding-left: 22px;
+	line-height: 1.3;
+	margin-bottom: 5px;
+}
+
+/* section
+------------------------------- */
+.boxStl02 {
+	padding: 13px 17px 10px;
+}
+
+/* btn
+------------------------------- */
+.btn01 {
+	font-size: 14px;
+}
+.icoSchedule {
+	background: url(/files/img/mypage/icon_schedule.png) no-repeat 0 0;
+	padding-left: 27px;
+	display: inline-block;
+	min-height: 22px;
+	padding-top: 2px;
+}
+
+.col2Box.yoyakuBtn > div > div {
+	margin-bottom: 10px;
+}
+.col2Box.yoyakuBtn > div:first-child > div  {
+	margin-right: 5px;
+}
+.col2Box.yoyakuBtn > div:last-child > div {
+	margin-left: 5px;
+}
+.col2Box.yoyakuBtn .inBtn {
+	display: table;
+	width: 100%;
+}
+.col2Box.yoyakuBtn .inBtn a {
+	height: 4.8em;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.yoyakuBtn .inBtn a {
+	font-size: 14px;
+	font-weight: 700;
+	border-radius: 3px;
+	text-decoration: none;
+	color: #262626;
+	line-height: 1.428;
+	vertical-align: middle;
+	display: block;
+	-webkit-box-shadow: 0 2px 3px #ddd;
+	box-shadow: 0 2px 3px #ddd;
+	padding: 1px 0;
+}
+
+.btnRed {
+	background: #fefdfd;
+	background: -moz-linear-gradient(top, #fefdfd 0%, #fcdede 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefdfd), color-stop(100%,#fcdede));
+	background: -webkit-linear-gradient(top, #fefdfd 0%,#fcdede 100%);
+	background: -o-linear-gradient(top, #fefdfd 0%,#fcdede 100%);
+	background: -ms-linear-gradient(top, #fefdfd 0%,#fcdede 100%);
+	background: linear-gradient(to bottom, #fefdfd 0%,#fcdede 100%);
+	border: 2px solid #ca4545;
+}
+a.btnRed:hover {
+	background: #fcdede;
+	background: -moz-linear-gradient(top, #fcdede 0%, #fefdfd 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefdfd), color-stop(100%,#fcdede));
+	background: -webkit-linear-gradient(top, #fcdede 0%,#fefdfd 100%);
+	background: -o-linear-gradient(top, #fcdede 0%,#fefdfd 100%);
+	background: -ms-linear-gradient(top, #fcdede 0%,#fefdfd 100%);
+	background: linear-gradient(to bottom, #fcdede 0%,#fefdfd 100%);
+	padding: 2px 0 0;
+}
+.btnRed > span {
+	background: url(/files/img/mypage/icon_arrw_05.png) no-repeat 0 .25em;
+	padding-left: 19px;
+}
+.btnRed span .inEm {
+	color: #b03333;
+}
+.btnGreen {
+	background: #fdfefd;
+	background: -moz-linear-gradient(top, #fdfefd 0%, #e6f5df 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdfefd), color-stop(100%,#e6f5df));
+	background: -webkit-linear-gradient(top, #fdfefd 0%,#e6f5df 100%);
+	background: -o-linear-gradient(top, #fdfefd 0%,#e6f5df 100%);
+	background: -ms-linear-gradient(top, #fdfefd 0%,#e6f5df 100%);
+	background: linear-gradient(to bottom, #fdfefd 0%,#e6f5df 100%);
+	border: 2px solid #5fa440;
+}
+a.btnGreen:hover {
+	background: #e6f5df;
+	background: -moz-linear-gradient(top, #e6f5df 0%, #fdfefd 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e6f5df), color-stop(100%,#fdfefd));
+	background: -webkit-linear-gradient(top, #e6f5df 0%,#fdfefd 100%);
+	background: -o-linear-gradient(top, #e6f5df 0%,#fdfefd 100%);
+	background: -ms-linear-gradient(top, #e6f5df 0%,#fdfefd 100%);
+	background: linear-gradient(to bottom, #e6f5df 0%,#fdfefd 100%);
+	padding: 2px 0 0;
+}
+.btnGreen > span {
+	background: url(/files/img/mypage/icon_arrw_07.png) no-repeat 0 .25em;
+	padding-left: 19px;
+	display: block;
+	margin: 0 22px 0 14px;
+}
+.btnGreen span .inEm {
+	color: #337216;
+}
+.btnColor01 {
+	text-align: center;
+	padding: 1px 0;
+	border-style: solid;
+	border-width: 2px;
+}
+a.btnColor01:hover {
+	padding: 2px 0 0;
+}
+.btnColor01 > span {
+	background: url(/files/img/mypage/icon_arrw_01.png) no-repeat 0 .25em;
+	padding-left: 19px;
+	margin: 0 22px 0 14px;
+	height: 3.5em;
+	line-height: 3.5em;
+	vertical-align: middle;
+}
+
+
+/* other
+------------------------------- */
+.hanteiLink {
+	display: block;
+}
+.tglBox {
+	display: none;
+}
+.noJS .tglBox {
+	display: block;
+}
+.tglList li.newDate .tglBox{
+	display: block;
+}
+
+
+
+
+/* ----------------------------------------
+
+page
+
+---------------------------------------- */
+
+/* mypage top
+------------------------------- */
+.topMenuYoyaku .boxStl02 {
+	padding: 13px 17px 15px;
+}
+.topMenuYoyaku ul {
+	margin-bottom: 7px;
+}
+.topMenuResult .boxStl02 {
+	padding: 13px 17px 15px;
+}
+
+/* result
+------------------------------- */
+.kubunBox {
+	margin-bottom: 30px;
+}
+.kubunBox .colBox > div {
+	margin-right: 50px;
+}
+.kubunBox .colBox > div:last-child {
+	margin-right: 0;
+}
+
+
+/* graph
+------------------------------- */
+.graphBox {
+	margin-bottom: 35px;
+}
+.graphBox > div {
+	text-align: left;
+}
+.graphBox > div > div {
+	margin-right: 15px;
+}
+.graphBox > div.last > div {
+	margin-right: 10px;
+	margin-left: 5px;
+}
+.graphBox .graph {
+	height: 380px;
+}
+
+
+/* ----------------------------------------
+
+clearfix
+
+---------------------------------------- */
+
+/* Modern Browsers
+------------------------------- */
+#gnavMp:after,
+.hdrMpSec:after,
+#contentMp:after {
+	display: block;
+	visibility: hidden;
+	clear: both;
+	height: 0;
+	content: ".";
+	line-height: 0;
+}
+
+/* Legacy IE
+------------------------------- */
+#gnavMp,
+.hdrMpSec,
+#contentMp {
+	*zoom: 1;
+}

@@ -1,0 +1,25 @@
+﻿@charset "utf-8";
+
+/* ----------------------------------------
+
+Redefine
+
+---------------------------------------- */
+
+/* 必要のない場所を印刷時に消す
+div#header,
+div#content div#sub,
+div#footer {
+	display: none;
+}
+*/
+
+/* IE6,7印刷対応 */
+
+* html body {
+	zoom: 0.8;
+}
+
+*:first-child+html body {
+	zoom: 0.8;
+}

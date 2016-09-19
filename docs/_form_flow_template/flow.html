@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja" class="noJS">
+
+<head>
+
+<meta charset="utf-8">
+<meta name="Description" content="">
+<meta name="Keywords" content=",">
+
+<link rel="stylesheet" type="text/css" href="../basic_html/files/css/common/import.css" media="tv,screen,print">
+<link rel="stylesheet" type="text/css" href="../_form_basic_template/files/css/form.css" media="tv,screen,print">
+<link rel="stylesheet" type="text/css" href="../basic_html/files/css/common/print.css" media="print">
+
+<title>Bridge form template｜ページタイトル</title>
+
+<script type="text/javascript" src="../basic_html/files/js/jquery.js"></script>
+<script type="text/javascript" src="../basic_html/files/js/common.js"></script>
+
+<link rel="stylesheet" type="text/css" href="./files/css/flow.css" media="tv,screen,print">
+
+<script>
+$(function(){
+		//form flow
+		$(".flow li:last-child").addClass("comp");
+});
+</script>
+
+</head>
+
+
+<body>
+
+<!-- container -->
+<div id="container">
+
+<!-- content -->
+<div id="content">
+
+	<!-- main -->
+	<div id="main" style="width: 750px;margin: 0 auto;">
+
+		<div class="section01 mgt20">
+			<h1 class="mgb15"><b>フロー図</b></h1>
+						<!-- flow -->
+			<ol class="flow">
+				<li class="this">入　力</li>
+				<li>確　認</li>
+				<li>完　了</li>
+			</ol>
+			<!--
+			<ol class="flow">
+				<li>入　力</li>
+				<li class="this">確　認</li>
+				<li>完　了</li>
+			</ol>
+			<ol class="flow">
+				<li>入　力</li>
+				<li>確　認</li>
+				<li class="this">完　了</li>
+			</ol>
+			-->
+			<!-- /flow -->
+
+			<div class="lead">
+				（1）下記をform.jsに追記する<br>
+				<br>
+				//form flow<br>
+				$(".flow li:last-child").addClass("comp");<br>
+				<br>
+				<br>
+				（2）<a href="./files/css/flow.css">flow.css</a>の中身をform.cssに追記する<br>
+				<br>
+				clearfixは最下部にまとめて書くこと<br>
+
+			</div>
+
+
+
+		</div>
+	</div>
+	<!-- /main -->
+		
+</div>
+<!-- /content -->
+
+
+</div>
+
+<!-- /container -->
+
+</body>
+
+</html>

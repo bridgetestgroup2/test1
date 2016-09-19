@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ja" class="noJS">
+
+<head>
+
+<meta charset="utf-8">
+<meta name="Description" content="">
+<meta name="Keywords" content=",">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes">
+
+<link rel="stylesheet" type="text/css" href="./itec/css/common/import.css" media="tv,screen,print">
+<link rel="stylesheet" type="text/css" href="../basic_html/files/css/common/print.css" media="print">
+<link rel="stylesheet" type="text/css" href="./itec/css/yoyakudata.css" media="tv,screen,print">
+
+<title>予約の確認・変更｜○○病院</title>
+
+<script src="./basic_html/js/jquery.js"></script>
+<script src="./basic_html/js/common.js"></script>
+</head>
+
+<body>
+
+<!-- container -->
+
+<div id="container">
+
+<!--#include virtual="/ssi/header.html" -->
+
+<!-- content -->
+<div id="content">
+
+<div class="mainBlock">
+
+	<h1 class="title03">予約の確認・変更</h1>
+
+	<ol class="flow">
+		<li class="this"><span class="spDisBlock">STEP1 </span>予約変更</li>
+		<li><span class="spDisBlock">STEP2 </span>確認</li>
+		<li class="end"><span class="spDisBlock">STEP3 </span>変更完了</li>
+	</ol>
+
+	<div class="section01">
+		<form action="" id="validation">
+		<h1 class="title02">予約情報の変更</h1>
+
+		<h2 class="title01">予約者情報</h2>
+		<table class="tbl01">
+			<col class="colW20">
+			<col class="colW10">
+			<col>
+			<tr>
+				<th><div>氏名</div></th>
+				<td class="required"><div><p>必須</p></div></td>
+				<td><div>
+					<span id="chkName1"><span class="spformSet">姓　<input name="" class="text medium01" type="text" placeholder="例：健康">　</span>
+					<span class="spformSet">名　<input name="" class="text medium01" type="text" placeholder="例：太郎"></span></span>
+				</div></td>
+			</tr>
+			<tr>
+				<th><div>フリガナ</div></th>
+				<td class="required"><div><p>必須</p></div></td>
+				<td><div>
+					<span id="chkKana1"><span class="spformSet">セイ　<input name="" class="text medium01" type="text" placeholder="例：ケンコウ">　</span>
+					<span class="spformSet">メイ　<input name="" class="text medium01" type="text" placeholder="例：タロウ"></span></span>
+				</div></td>
+			</tr>
+			<tr>
+				<th><div>健康保険・会社
+				</div></th>
+				<td class="option"><div><p>任意</p></div></td>
+				<td><div>
+					<p><input type="radio" name="chk02" id="chk02_01" class="check" value="1"> <label for="chk02_01">本人（被保険者）</label>　<input type="radio" name="chk02" id="chk02_02" class="check" value="2"> <label for="chk02_02">配偶者（被扶養者）</label></p>
+					<table class="frmTbl01 mgt5 mgb10">
+						<col class="colW30">
+						<col>
+						<tr>
+							<td>保険証記号</td>
+							<td><input type="text" name="" class="text medium02"></td>
+						</tr>
+						<tr>
+							<td>保険証番号</td>
+							<td><input type="text" name="" class="text medium02"></td>
+						</tr>
+						<tr>
+							<td>保険者番号</td>
+							<td><input type="text" name="" class="text small02" placeholder="1234567890"></td>
+						</tr>
+						<tr>
+							<td>健康保険組合名称</td>
+							<td><input type="text" name="" class="text medium02"></td>
+						</tr>
+					</table>
+				</div></td>
+			</tr>
+			<tr>
+				<th><div>住所</div></th>
+				<td class="required"><div><p>必須</p></div></td>
+				<td><div>
+					<p>〒 <span id="chkZip1"><input type="text" name="zip11" class="text small01" max="3"> - <input type="text" class="text small01" name="zip12" size="5" maxlength="4" onkeyup="AjaxZip3.zip2addr('zip11','zip12','addr11','addr11');">　</span><span class="zipCap">※自動で住所検索されます</span></p>
+					<p class="mgt10"><input id="chkAddress1" type="text" name="addr11" class="text large01" maxlength="60" placeholder="例：東京都港区芝大門○丁目△番□号　東京ビル　○○号室（最大60文字）"></p>
+				</div></td>
+			</tr>
+			<tr>
+				<th><div>メールアドレス</div></th>
+				<td class="required"><div><p>必須</p></div></td>
+				<td><div>
+					<input id="chkMail1" type="text" name="" class="text large01" placeholder="例：aaaaaaaaaa@xxx.ne.jp">
+				</div></td>
+			</tr>
+			<tr>
+				<th><div>メールアドレス<br>（確認用）</div></th>
+				<td class="required"><div><p>必須</p></div></td>
+				<td><div>
+					<input id="chkMail1_2" type="text" name="" class="text large01" placeholder="例：aaaaaaaaaa@xxx.ne.jp">
+				</div></td>
+			</tr>
+			<tr>
+				<th><div>備考</div></th>
+				<td class="option"><div><p>任意</p></div></td>
+				<td><div>
+					<textarea class="text large01" rows="6" placeholder="代理人が入力している、松葉杖利用中など、受診予定施設への連絡事項がありましたらご記入下さい"></textarea>
+				</div></td>
+			</tr>
+		</table>
+		<table class="tbl01">
+			<col class="colW20">
+			<col class="colW10">
+			<col>
+			<tr>
+				<th><div>連絡先電話番号</div></th>
+				<td class="required"><div><p>必須</p></div></td>
+				<td><div>
+					<input id="chkTel1" type="text" name="" class="text medium02" placeholder="例：00000000000">
+				</div></td>
+			</tr>
+			<tr>
+				<th><div>お電話がつながりやすい時間帯</div></th>
+				<td class="required"><div><p>必須</p></div></td>
+				<td><div>
+					<ul class="frmList01" id="chkTime1">
+						<li><input type="radio" name="chk03" id="chk03_01" class="check" value="1"> <label for="chk03_01">9:00～11:00</label></li>
+						<li><input type="radio" name="chk03" id="chk03_02" class="check" value="2"> <label for="chk03_02">11:00～14:00</label></li>
+						<li><input type="radio" name="chk03" id="chk03_03" class="check" value="3"> <label for="chk03_03">14:00～17:00</label></li>
+						<li><input type="radio" name="chk03" id="chk03_04" class="check" value="4"> <label for="chk03_04">何時でも可</label></li>
+					</ul>
+				</div></td>
+			</tr>
+		</table>
+
+		<table class="tbl01">
+			<col class="colW20">
+			<col class="colW10">
+			<col>
+			<tr>
+				<th><div>同伴者</div></th>
+				<td class="option"><div><p>任意</p></div></td>
+				<td><div>
+					<p id="tglBtn" class="btnLeft"><a class="btn01"><span class="icoPosL icoPlus">同伴者の情報を入力する</span></a></p>
+				</div></td>
+			</tr>
+		</table>
+
+		
+
+		<div class="boxStl01 mgb30">
+			<h3 class="title02">利用規約</h3>
+			<div class="boxStl01 privacyTxtBox">
+				<p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+			</div>
+			<div class="alnC">
+				<p class="mgb10">入力された個人情報は<a href="">個人情報保護方針</a>に基づき取り扱われることに同意するものとします。</p>
+				<span id="chkPrivacy"><input type="checkbox" class="check" id="chk10_01"><label for="chk10_01">個人情報保護方針に同意します</label></span>
+			</div>
+		</div>
+
+		<table class="tbl01">
+			<col class="colW50">
+			<col>
+			<tr>
+				<th><div>【会員情報への変更の反映】<br>登録している会員情報にも変更内容を反映しますか？</div></th>
+				<td><div>
+					<div id="chkHanei1">
+					<ul class="frmList01">
+						<li><input type="radio" name="chk010" id="chk010_01" class="check" value="1"> <label for="chk010_01">反映する</label></li>
+						<li><input type="radio" name="chk010" id="chk010_02" class="check" value="2"> <label for="chk010_02">反映しない</label></li>
+					</ul>
+					</div>
+				</div></td>
+			</tr>
+		</table>
+
+		<ul class="btnUnit01">
+			<li class="btnLeft"><a class="btn01" href="yoyakudata_henkou_detail.html"><span class="icoPosL icoBack">戻る</span></a></li>
+			<li class="btnStyle01"><input class="icoPosL icoArrw" type="submit" value="確認画面へ進む" href="yoyakudata_err.html"></li>
+		</ul>
+
+		</form>
+	</div>
+</div>
+<p class="pageTopBtn"><a href="#container"><img src="./itec/img/common/btn_pagetop_01_off.png" alt="このページの先頭へ" width="192" height="43"></a></p>
+
+</div>
+<!-- /content -->
+
+</div>
+<!-- /container -->
+
+
+</body>
+
+</html>

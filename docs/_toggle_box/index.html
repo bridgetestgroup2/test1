@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja" class="noJS">
+
+<head>
+
+<meta charset="utf-8">
+<meta name="Description" content="">
+<meta name="Keywords" content=",">
+
+<link rel="stylesheet" type="text/css" href="../basic_html/files/css/common/import.css" media="tv,screen,print">
+<link rel="stylesheet" type="text/css" href="../basic_html/files/css/common/print.css" media="print">
+
+<title>ページタイトル</title>
+
+<script src="../basic_html/files/js/jquery.js"></script>
+<script src="../basic_html/files/js/common.js"></script>
+
+<style>
+#content {
+	width: 600px;
+	margin: 0 auto;
+	font-family: "メイリオ";
+}
+
+
+/* ----------------------------------------
+
+- 以下！！
+
+---------------------------------------- */
+.tglBox {
+	display: none;
+}
+.noJS .tglBox {
+	display: block;
+}
+
+</style>
+
+<script>
+$(function() {
+	$('.tglList').find('.tglBtn').css({
+		'cursor': 'pointer'
+	}).on('click',function(){
+		$(this).next('.tglBox').slideToggle(300);
+	});
+});
+</script>
+
+</head>
+
+<body>
+
+<!-- container -->
+<div id="container">
+
+<!-- content -->
+<div id="content" style="padding:20px;"><b>アコーディオン</b><br>
+
+	<ul class="tglList">
+		<li>
+			<p class="tglBtn">開く開く開く</p>
+			<div class="tglBox">
+				ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
+			</div>
+		</li>
+		<li>
+			<p class="tglBtn">開く開く開く</p>
+			<div class="tglBox">
+				ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
+			</div>
+		</li>
+		<li>
+			<p class="tglBtn">開く開く開く</p>
+			<div class="tglBox">
+				ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
+			</div>
+		</li>
+	</ul>
+
+
+<p class="mgt30">
+
+
+<b>html</b><br>
+	&lt;ul class="tglList"&gt;<br>
+		&lt;li&gt;<br>
+			&lt;p class="tglBtn"&gt;開く開く開く&lt;/p&gt;<br>
+			&lt;div class="tglBox"&gt;<br>
+				ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト<br>
+			&lt;/div&gt;<br>
+		&lt;/li&gt;<br>
+	&lt;/ul&gt;<br>
+<br>
+
+<b>css</b><br>
+.tglBox {<br>
+	display: none;<br>
+}<br>
+.noJS .tglBox {<br>
+	display: block;<br>
+}<br>
+<br>
+<b>js</b><br>
+$(function() {<br>
+	$('.tglList').find('.tglBtn').css({<br>
+		'cursor': 'pointer'<br>
+	}).on('click',function(){<br>
+		$(this).next('.tglBox').slideToggle(300);<br>
+	});<br>
+});
+
+
+</p>
+
+
+</div>
+<!-- /content -->
+
+</div>
+<!-- /container -->
+
+</body>
+
+</html>

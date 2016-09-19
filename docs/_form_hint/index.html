@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ja" class="noJS">
+
+<head>
+
+<meta charset="utf-8">
+<meta name="Description" content="">
+<meta name="Keywords" content=",">
+
+<link rel="stylesheet" type="text/css" href="../basic_html/files/css/common/import.css" media="tv,screen,print">
+<link rel="stylesheet" type="text/css" href="../_form_basic_template/files/css/form.css" media="tv,screen,print">
+<link rel="stylesheet" type="text/css" href="../basic_html/files/css/common/print.css" media="print">
+
+<title>フォーム　テキストエリアの注釈</title>
+
+<script type="text/javascript" src="../basic_html/files/js/jquery.js"></script>
+<script type="text/javascript" src="../basic_html/files/js/common.js"></script>
+<script type="text/javascript" src="./files/js/form.js"></script>
+
+<style>
+#main {
+	width: 750px;
+	margin: 0 auto;
+}
+</style>
+
+<script>
+/*
+ * jQuery Form Tips 1.2.3
+ * By Manuel Boy (http://www.manuelboy.de)
+ * Copyright (c) 2010 Manuel Boy
+ * Licensed under the MIT License: http://www.opensource.org/licenses/mit-license.php
+*/
+(function($){
+	
+	$.fn.formtips = function(options) {
+	
+		// handle options
+		var settings = jQuery.extend({
+			tippedClass: "tipped"
+		}, options);
+	
+		return this.each(function() {
+			
+			// prepare input elements an textareas
+			var e = $(this);
+			
+			// do not apply form tips to inputs of type file, radio or checkbox
+			var type = $(e).attr('type');
+			if(type != 'file' && type != 'checkbox' && type != 'radio') {
+		
+				// handle focus event
+				$(e).bind('focus', function() {
+					if($(e).is('textarea')) {
+						console.log($(this).text());
+						if($(this).val() == lv) {
+							$(this).text('').removeClass(settings.tippedClass);
+						}
+					} else {
+						if($(this).val() == lv) {
+							$(this).val('').removeClass(settings.tippedClass);
+						}
+					}
+					return false;
+				});
+
+				// handle blur event
+				$(e).bind('blur', function() {
+					var lv = $(this).attr('title');
+					if($(e).is('textarea')) {
+						console.log($(this).val());
+						if($(this).val() == '') {
+							$(this).text(lv).addClass(settings.tippedClass);
+						}
+					} else {
+						if($(this).val() == '') {
+							$(this).val(lv).addClass(settings.tippedClass);
+						}
+					}
+					return false;
+				});
+		
+				// handle initial text
+				var lv = $(e).attr('title');
+				if($(e).is('textarea')) {
+					if($(e).text() == '' || $(e).text() == $(this).attr('title')) {
+						$(e).text(lv).addClass(settings.tippedClass);
+					} else {
+						$(e).removeClass(settings.tippedClass);
+					}
+				} else {
+					if($(e).val() == '' || $(e).val() == $(this).attr('title')) {
+						$(e).val(lv).addClass(settings.tippedClass);
+					} else {
+						$(e).removeClass(settings.tippedClass);
+					}
+				}
+			
+				// handle removal of default value
+				$(e).parentsUntil('form').parent().submit(function() {
+					var lv = $(e).attr('title');
+					if($(e).is('textarea')) {
+						if($(e).text() == lv) {
+							$(e).text('').removeClass(settings.tippedClass);
+						}
+					} else {
+						if($(e).val() == lv) {
+							$(e).val('').removeClass(settings.tippedClass);
+						}
+					}
+				});
+			
+			}
+		
+		});
+	};
+
+})(jQuery);
+
+/*----------------------------------------------
+*
+* 	jQuery ready
+*
+----------------------------------------------*/
+
+$(function(){
+
+		//検索フォームヒント		
+		var hint = $(".hint");
+		hint.formtips();
+
+});
+
+
+</script>
+
+<style>
+.hint.tipped {
+	color: #aaa;
+}
+</style>
+
+
+
+
+
+</head>
+
+
+<body>
+
+<!-- container -->
+<div id="container">
+
+<!-- header -->
+<div id="header">
+
+	<p class="skip"><a href="#content">本文までスキップ</a></p>
+
+	<p id="siteID">Bridge form template</p>
+</div>
+<!-- /header -->
+
+<noscript><p id="noscript">当サイトでは、JavaScriptを使用しております。<br>
+JavaScriptを有効にしていただきますと、より快適にご覧いただけます。</p></noscript>
+
+<!-- content -->
+<div id="content">
+
+	<!-- main -->
+	<div id="main">
+
+		<div class="section01">
+
+			<form action="" method="">
+
+				<div class="formTbl01">
+
+					<table>
+						<col class="colW25">
+						<col class="colW10">
+						<col>
+						<tr>
+							<th rowspan="2">ご意見</th>
+							<td class="option"><p>任意</p></td>
+							<td>
+							<p>このサイトをどちらでお知りになりましたか？</p>
+							<ul class="mgt10">
+								<li><input type="radio" name="find" id="chk04_01" class="check" value="1"> <label for="chk04_01">店名で検索して</label></li>
+								<li><input type="radio" name="find" id="chk04_02" class="check" value="2"> <label for="chk04_02">知人・友人から</label></li>
+								<li><input type="radio" name="find" id="chk04_03" class="check" value="3"> <label for="chk04_03">弊社からのお知らせ</label></li>
+								<li><input type="radio" name="find" id="chk04_04" class="check" value="4"> <label for="chk04_04">その他</label><br>
+								<input type="text" name="find_etc" class="txt medium02 mgt10 hint" value="" title="入力して下さい"></li>
+							</ul></td>
+						</tr>
+						<tr>
+							<td class="option"><p>任意</p></td>
+							<td><textarea class="txt large01 hint" rows="4" cols="30" title="入力して下さい"></textarea></td>
+						</tr>
+						<tr>
+							<th>メールマガジン</th>
+							<td class="required"><p>必須</p></td>
+							<td><input type="checkbox" name="learned[]" id="chk03_02" class="check" value="2"> <label for="chk03_02">購読する</label> </td>
+						</tr>
+					</table>
+					
+				</div>
+
+			</form>
+			
+		</div>
+	</div>
+	<!-- /main -->
+		
+</div>
+<!-- /content -->
+
+<!-- footer -->
+<div id="footer">
+	<address>COPYRIGHT © BRIDGE CORPORATION INC. ALL RIGHTS RESERVED.</address>
+</div>
+<!-- /footer -->
+
+</div>
+
+<!-- /container -->
+
+</body>
+
+</html>

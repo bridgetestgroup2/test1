@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja" class="noJS">
+
+<head>
+
+<meta charset="utf-8">
+<meta name="Description" content="">
+<meta name="Keywords" content=",">
+
+<link rel="stylesheet" type="text/css" href="../basic_html/files/css/common/import.css" media="tv,screen,print">
+<link rel="stylesheet" type="text/css" href="../_form_basic_template/files/css/form.css" media="tv,screen,print">
+<link rel="stylesheet" type="text/css" href="../basic_html/files/css/common/print.css" media="print">
+
+<title>カウントダウン 1日単位</title>
+
+<script type="text/javascript" src="../basic_html/files/js/jquery.js"></script>
+<script type="text/javascript" src="../basic_html/files/js/common.js"></script>
+
+<script type="text/javascript">
+	var countDown = {
+
+		oneday_mirisecond	: 24 * 60 * 60 * 1000,//1日のミリ秒数
+		currentTime				: new Date(),//現在時刻
+		endDateTime				: new Date("January 01,2015 00:00:00"),//終了時刻
+		funcCountDown:function(){
+
+			var leftTime	= countDown.endDateTime - countDown.currentTime,//残時間
+					leftDay			= Math.floor(leftTime / countDown.oneday_mirisecond);// 残日数
+
+			$("#timeLeft").text(leftDay + '日');
+
+			setTimeout('countDown.funcCountDown()', 3600000);//1時間ごとに再読み込み
+
+		}
+	}
+	$(function() {
+		countDown.funcCountDown();
+	});
+</script>
+
+</head>
+
+<body>
+
+<!-- container -->
+<div id="container" style="text-align:center;padding-top:50px;">
+
+	<p>カウントダウン終了まで</p>
+	<div id="timeLeft"></div>
+
+	<p style="margin-top:50px;">1時間ごとに再読み込みになります。</p>
+
+</div>
+
+<!-- /container -->
+
+</body>
+
+</html>

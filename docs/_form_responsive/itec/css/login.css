@@ -1,0 +1,87 @@
+﻿@charset "utf-8";
+
+/* ----------------------------------------
+
+Content
+
+---------------------------------------- */
+.mainBlock {
+	padding: 30px 40px;
+}
+.col2Box {
+	margin-top: 30px;
+}
+.innerCol01 .loginBox {
+	padding-right: 15px;
+}
+.innerCol02 .loginBox {
+	padding-left: 15px;
+}
+.loginBox .boxStl02 {
+	background-color: #fbfbfb;
+	padding-bottom: 15px;
+}
+
+.loginBox table {
+	margin-bottom: 7px;
+	width: 100%;
+}
+
+.loginBox table td.err{
+	color: #f00;
+	font-size:10px;
+}
+
+.loginBtnList {
+	padding-top: 10px;
+}
+.loginBtnList li {
+	margin-bottom: 15px;
+	font-size: 14px;
+}
+.loginBtnList li a span.icoArrw{
+	background-image: url(/files/img/common/icon_arrw_04.png);
+}
+.loginBtnList .btn01 .icoPosL {
+	background-position: 0 0.3em;
+}
+
+.boxStl02.hasTitle p.checkbox{
+	text-align: center;
+	vertical-align: middle;
+	margin-bottom: 11px;
+}
+.boxStl02.hasTitle p.checkbox input{
+	margin: 2px 5px 0 0;
+}
+
+.col2Box .innerCol01 .loginBox .boxStl02 table th{
+	vertical-align: top;
+	padding-top: 8px;
+}
+
+
+.remindBox {
+	width: 590px;
+	margin: 20px auto;
+}
+.remindBox .boxStl02 {
+	padding: 20px 20px 15px;
+}
+.remindBox select {
+	width: 99%;
+	border-radius: 4px;
+}
+.remindCompBox {
+	padding: 30px 20px;
+}
+
+
+.btnStyle01.typeLogin {
+	min-width: 215px;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.4);
+	box-shadow: inset 0 1px 0 rgba(255,255,255,.4);
+}
+.btnStyle01.typeLogin input {
+	border-top-color: transparent;
+}

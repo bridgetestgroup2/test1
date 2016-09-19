@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja" class="noJS">
+
+<head>
+
+<meta charset="utf-8">
+<meta name="Description" content="">
+<meta name="Keywords" content=",">
+
+<link rel="stylesheet" type="text/css" href="../basic_html/files/css/common/import.css" media="tv,screen,print">
+<link rel="stylesheet" type="text/css" href="./files/css/event_calendar.css" media="tv,screen,print">
+<link rel="stylesheet" type="text/css" href="../basic_html/files/css/common/print.css" media="print">
+
+<title>ページタイトル</title>
+
+<script src="../basic_html/files/js/jquery.js"></script>
+<script src="./files/js/jquery.calendar.js"></script>
+
+
+<script type="text/javascript" >
+$(function(){
+
+		//右カラムカレンダー
+		$("#calendar").calendar({
+			navi: {
+				ja: ['\u524d\u6708', '\u6b21\u6708']
+			},
+			// イベントの設定
+			events: {
+'2013-12-1': {
+	url: '/event/?act=search&term_bgn=2014/01/08&term_end=2014/01/08'
+},
+'2014-01-08': {
+	url: '/event/?act=search&term_bgn=2014/01/08&term_end=2014/01/08'
+},
+'2014-01-14': {
+	url: '/event/?act=search&term_bgn=2014/01/14&term_end=2014/01/14'
+},
+'2014-2-1': {
+	url: '/event/?act=search&term_bgn=2014/01/08&term_end=2014/01/08'
+}
+			}
+		});
+
+});
+</script>
+
+</head>
+
+<body>
+
+<!-- container -->
+<div id="container">
+
+	<div class="eventCalendar">
+		<div id="calendar"></div>
+		<p><a href="">イベント一覧を見る</a></p>
+	</div>
+
+</div>
+<!-- /container -->
+
+</body>
+
+</html>

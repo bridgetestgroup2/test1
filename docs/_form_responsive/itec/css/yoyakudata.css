@@ -1,0 +1,41 @@
+﻿@charset "utf-8";
+
+
+/* ----------------------------------------
+
+- yoyakuBox
+
+---------------------------------------- */
+.yoyakuBox{
+	padding: 0 30px;
+}
+.yoyakuBox li.box01{
+	border-radius: 5px;
+	border: 1px solid #cfdae0;
+	margin-bottom: 20px;
+	padding: 20px 30px;
+	background-color: #ebf2f6;
+}
+.tabBox{
+	border: solid 1px #ccc;
+	padding-top: 20px;
+	margin: 0 3px 0 1px;
+}
+.boxList01 li{
+	color:#003f6a;
+	margin-left: 20px;
+	list-style-type:disc;
+}
+
+.boxList01 li span{
+	color:#555;
+}
+.listStyle01{
+	margin-bottom: 20px;
+}
+.listStyle01 li{
+	margin-left: 20px;
+	list-style-type:disc;
+}
+
+

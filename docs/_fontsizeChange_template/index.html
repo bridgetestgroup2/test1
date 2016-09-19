@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja" class="noJS">
+
+<head>
+
+<meta charset="utf-8">
+<meta name="Description" content="">
+<meta name="Keywords" content=",">
+
+<link rel="stylesheet" type="text/css" href="../basic_html/files/css/common/import.css" media="tv,screen,print">
+<link rel="stylesheet" type="text/css" href="../basic_html/files/css/top.css" media="tv,screen,print">
+<link rel="stylesheet" type="text/css" href="../basic_html/files/css/common/print.css" media="print">
+
+<title>ページタイトル</title>
+
+<script src="../basic_html/files/js/jquery.js"></script>
+<script src="../basic_html/files/js/common.js"></script>
+
+<script>
+	
+	/*----------------------------------------------
+*
+* 	jBTextResizer 0.2
+* 	since:11-06-20
+*		last modified: 11-08-03
+*		MIT license.
+* 	c 2011 Bridge Corporation Inc.
+*
+----------------------------------------------*/
+
+		$.fn.jBTextResizer = function(options) {
+				
+				var self = $(this);
+				
+				// 初期値、オプションの初期値を設定
+        var set = $.extend({
+						target : $("#container"), //サイズ変更をする対象のセレクタ
+						btnBig : "sizeBig", //大ボタンのid名
+						btnReset : "sizeReset", //リセット（中）ボタンのid名
+						btnSmall : "sizeSmall", //小ボタンのid名
+						className : "active", //アクティブ時のclass名
+						defaultSize : 12, //targetに指定する基準フォントサイズ
+						plus: 2, //拡大時のフォントサイズ増加値
+						minus: 2, //縮小時のフォントサイズ減少値
+						cookie : true, //クッキーを使用するか
+						expires : 7 //クッキーの保存期間
+        },options || {}); // optionsに値があれば上書き
+				
+				//ボタンのカーソルを指にして、フォント切り替えを可視化
+				self.css("cursor","pointer").parent().show();
+				
+				//クッキーを使用する場合、クッキーに保存されているフォントサイズをtargetに指定する
+				if(set.cookie === true) {
+						set.target.css("font-size",$.cookie('fsize'));
+						if(set.defaultSize < parseFloat($.cookie('fsize'))) {
+								$("#"+set.btnBig).find("span").addClass(set.className);
+						} else if(set.defaultSize > parseFloat($.cookie('fsize'))){
+								$("#"+set.btnSmall).find("span").addClass(set.className);
+						} else {
+								$("#"+set.btnReset).find("span").addClass(set.className);
+						}
+				}
+				
+				// 処理内容
+				var sizeChange = function() {
+						
+						var child = $(this).find("span");
+						
+						if(child.is("."+set.className)) {
+								//アクティブな時の処理
+								return false;
+						} else {
+								
+								//クリックしたボタンで処理を分岐
+								switch($(this).attr("id")){
+									case set.btnBig:
+										var fontSize = set.defaultSize+set.plus;
+										break;
+									case set.btnReset:
+										var fontSize = set.defaultSize;
+										break;
+									case set.btnSmall:
+										var fontSize = set.defaultSize-set.minus;
+										break;
+								}
+								
+								//変更後のサイズを指定
+								set.target.css("font-size",fontSize+"px");
+								
+								//全てのボタンからclassを外す
+								self.find("span").removeClass(set.className);
+								
+								//クリックしたボタンにclassを付ける
+								child.addClass(set.className);
+								
+								//クッキーを使用する場合、変更後のサイズを保存
+								if(set.cookie === true) {
+										$.cookie("fsize", null);
+										$.cookie("fsize",fontSize+"px",{expires: set.expires,path:'/'});
+								}
+								
+						}
+						
+						if(typeof(setAutoHeight) == "function"){
+							setAutoHeight();
+						}
+				};
+				
+				// セレクタで指定した要素を処理
+				self.click(sizeChange);
+
+				// メソッドチェーン用
+				return this;
+				
+		};
+
+/*----------------------------------------------
+*
+* 	jQuery ready
+*
+----------------------------------------------*/
+
+	$(function(){
+
+			//fontSizeChange
+			$("#fontSizeChange dd").jBTextResizer({defaultSize:12}).css("cursor","pointer");
+
+
+	});
+
+
+</script>
+
+</head>
+
+<body>
+
+<!-- container -->
+<div id="container">
+
+<!-- content -->
+<div id="content">
+
+<dl id="fontSizeChange">
+  <dt><img src="/files/img/common/txt_size_01.png" alt="文字サイズ" width="92" height="29"></dt>
+  <dd id="sizeSmall"><span>小</span></dd>
+  <dd id="sizeReset"><span>中</span></dd>
+  <dd id="sizeBig"><span>大</span></dd>
+</dl>
+
+<p>テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+
+
+</div>
+<!-- /content -->
+
+</div>
+<!-- /container -->
+
+</body>
+
+</html>

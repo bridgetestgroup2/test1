@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja" class="noJS">
+
+<head>
+
+<meta charset="utf-8">
+<meta name="Description" content="">
+<meta name="Keywords" content=",">
+
+<link rel="stylesheet" type="text/css" href="../../basic_html/files/css/common/import.css" media="tv,screen,print">
+
+<title>PC</title>
+
+<script src="../../basic_html/files/js/jquery.js"></script>
+<script src="../../basic_html/files/js/common.js"></script>
+
+<style>
+#smpBnr {
+	display: block;
+	padding: 15px 5px 16px;
+	background: #E3D9F4;
+	border: 1px solid #b5d7e3;
+	text-align: center;
+	font-size: 44px;
+	color: #17072e;
+	margin-bottom: 5px;
+}
+</style>
+
+
+<script type="text/javascript">
+(function($){
+
+	//userAgent
+	var ua = navigator.userAgent;
+	var smartFlg = (ua.indexOf('iPhone') > 0 && ua.indexOf('iPad') == -1) || ua.indexOf('iPod') > 0 || (ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0 || ua.indexOf('Windows Phone') > 0);
+
+	//url
+	var url = document.location.href.split('.jp/').pop();
+	var topFlg = (url==''||url=='index.html');
+	var hasSpPageFlg = (url.indexOf('topic') === -1 && url.indexOf('inquiry') === -1);
+
+	//pcViewCookie
+	var pcViewCookie = $.cookie('xx_pc');
+
+	//sp top reload
+	if(topFlg && smartFlg && (pcViewCookie!='true')){
+		window.location.href = './sp/index.html';
+	}
+	//sp page reload
+	if(hasSpPageFlg && !topFlg && smartFlg && (pcViewCookie!='true')){
+		location.href = '/sp/'+ url;
+	}
+
+	$(function(){
+
+		//sp bnr add
+		if (smartFlg && hasSpPageFlg) {
+			$('#container').prepend('<div id="smpBnr"><a href="#">スマートフォンサイトへ</a></div>');
+			$('#smpBnr a').on('click',function(e){
+				e.preventDefault();
+				$.cookie('xx_pc', false, {path:'/', expires:365});
+				pcViewCookie = $.cookie('xx_pc');
+				location.href = './sp/' + url;
+			});
+		}
+
+	});
+
+
+})(jQuery);
+</script>
+
+
+</head>
+
+<body>
+
+<!-- container -->
+<div id="container">
+
+pc
+
+</div>
+<!-- /container -->
+
+</body>
+
+</html>

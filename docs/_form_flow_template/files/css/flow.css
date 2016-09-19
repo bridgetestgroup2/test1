@@ -1,0 +1,64 @@
+﻿@charset "utf-8";
+
+/*------------------------------------------------------------------------------
+XXXXXXXXXX - CSS Modules Import
+Date: 2014-0X-XX
+Copyright (C) XXX. All Rights Reserved.
+------------------------------------------------------------------------------*/
+
+/* ----------------------------------------
+
+使用時は下記をform.cssに追加すること
+
+---------------------------------------- */
+
+/* flowStyle
+------------------------------- */
+.flow {
+	width: 100%;
+	margin-bottom: 20px;
+	font-weight: 700;
+}
+.flow li {
+	float: left;
+	width: 33%;
+	padding: 0.5em 0;
+	background: #e6e6e6 url(../img/form/bg_flow.png) no-repeat right center;
+	text-align: center;
+}
+.flow li.this {
+	background: #FF6060 url(../img/form/bg_flow_this.png) no-repeat right center;
+	color: #fff;
+}
+.flow li.prev {
+	background: #e6e6e6 url(../img/form/bg_flow_prev.png) no-repeat right center;
+}
+.flow li.comp {
+	width: 34%;
+	/width: 33.9%;
+	background-image: none;
+}
+
+
+/* ----------------------------------------
+
+clearfix
+
+---------------------------------------- */
+
+/* Modern Browsers
+------------------------------- */
+.flow:after {
+	display: block;
+	visibility: hidden;
+	clear: both;
+	height: 0;
+	content: ".";
+	line-height: 0;
+}
+
+/* Legacy IE
+------------------------------- */
+.flow {
+	*zoom: 1;
+}

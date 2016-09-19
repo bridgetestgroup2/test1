@@ -1,0 +1,262 @@
+﻿@charset "utf-8";
+
+/*------------------------------------------------------------------------------
+Date: 2014-08-18
+Copyright (C) HOKKAI SHIKAN CO.,LTD. All Rights Reserved.
+------------------------------------------------------------------------------*/
+
+/* ----------------------------------------
+
+- Table Style
+
+---------------------------------------- */
+
+/* tbl
+------------------------------- */
+.formTbl01 table {
+	width: 100%;
+	margin-bottom: 30px;
+	border: 7px solid #e5e5e5;
+}
+.formTbl01 table th,
+.formTbl01 table td {
+	padding: 13px 15px;
+	border: 1px solid #e5e5e5;
+	background-color: #fff;
+	vertical-align: middle;
+}
+.formTbl01 table th {
+	font-weight: 700;
+	color: #262626;
+	background-color: #fff;
+	vertical-align: top;
+}
+
+/*  option and required  */
+.formTbl01 table td.required,
+.formTbl01 table td.option {
+	font-weight: 400;
+	font-size: 85.8%;
+	color: #fff;
+	vertical-align: middle;
+}
+.formTbl01 table td.required p,
+.formTbl01 table td.option p {
+	width: 3.5em;
+	margin: 0 auto; 
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	text-align: center;
+}
+.formTbl01 table td.option			{ background: #f5f5f5;}
+.formTbl01 table td.option p		{ background: #a6a6a6;}
+.formTbl01 table td.required		{ background: #fff0f0;}
+.formTbl01 table td.required p	{ background: #ff6060;}
+
+/* innerTable */
+.formTbl01 table th.inTH {
+	vertical-align: middle;
+	background-color: #fbfaf6;
+} 
+
+/* 追記分 */
+.formTbl01 {
+    width: 100%;
+    vertical-align: top;
+    margin-bottom:25px;
+}
+.formTbl01 th,
+.formTbl01 td{
+    border: 1px solid #ead5c1;
+    padding:15px 15px 15px 15px;
+}
+.formTbl01 td:nth-child(2){
+	text-align: center;
+}
+.formTbl01 th{
+	background-color: #fff2e2;
+}
+.formTbl01 li.mgb10{
+	margin-bottom:10px;
+}
+.formTbl01 input{
+	border:0;
+	border:solid 1px #ccc;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-moz-box-shadow: inset 0 0 4px rgba(0,0,0,0.1);
+	-webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.1);
+	box-shadow: inner 0 0 4px rgba(0, 0, 0, 0.1);
+}
+.formTbl01 input.btn{
+	cursor: pointer;
+	color:#000000;
+	padding:1px 5px;
+}
+
+/* ----------------------------------------
+
+- Form Style
+
+---------------------------------------- */
+.formTbl01 input.txt,
+.formTbl01 textarea.txt {
+	border: 1px solid #accad9;
+	background: #fff;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0px 3px 4px 0px rgba(0, 0, 0, 0.05);
+	-moz-box-shadow: inset 0px 3px 4px 0px rgba(0, 0, 0, 0.05);
+	box-shadow: inset 0px 3px 4px 0px rgba(0, 0, 0, 0.05);
+}
+.formTbl01 input.txt {
+	padding: 5px 2px;
+}
+.formTbl01 input[type="text"]:focus,
+.formTbl01 input[type="password"]:focus,
+.formTbl01 textarea:focus {
+	border: 1px solid #f19900;
+	background: #fff5d6;
+}
+
+/* error
+------------------------------- */
+input.err,
+textarea.err,
+select.err {
+	border-color: #ff6060;
+	background: #fff0f0;
+}
+input.err:focus,
+textarea.err:focus {
+	border-color: #ee5959;
+}
+.errorTxt {
+	margin-top: 8px;
+	font-size: 83.4%;
+	color: #ff0000;
+}
+
+/* dl list
+------------------------------- */
+dl.list01 dt {
+	float: left;
+	clear: left;
+	width: 8em; 
+	padding-top: 0.5em;
+}
+dl.list01 dd {
+	padding-left: 8.5em;
+	margin-bottom: 8px;
+}
+
+dl.list02 dt {
+	float: left;
+	clear: left;
+	width: 5em; 
+	padding-top: 0.5em;
+}
+dl.list02 dd {
+	padding-left: 5.5em;
+	margin-bottom: 8px;
+}
+
+/* ----------------------------------------
+
+- Button Style
+
+---------------------------------------- */
+
+/* btn
+------------------------------- */
+.formBtn01 {
+	padding: 0.7em 1em;
+	font-size: 120%;
+	font-weight: 700;
+	line-height: 1.2;
+	border: 1px solid #a6a6a6;
+	background: #e6e6e6 url(../img/form/bg_btn_01.png) repeat-x 0 center;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+input.formBtn01:hover {
+	color: #a6a6a6;
+	background: #fff;
+}
+input.formBtn01:active {
+	background: #ccc;
+}
+
+/* btn02 */
+.formBtn02 {
+	padding: 0.3em 0.8em;
+	font-size: 120%;
+	font-weight: 700;
+	line-height: 1.2;
+	border: 1px solid #a6a6a6;
+	background: #e6e6e6 url(../img/form/bg_btn_01.png) repeat-x 0 center;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+input.formBtn02:hover {
+	color: #a6a6a6;
+	background: #fff;
+	-webkit-box-shadow: inset 0 1px 3px #CCC, inset 0 0 #CCC, 0 0 0 #CCC;
+	-moz-box-shadow: inset 0 1px 3px #CCC, inset 0 0 #CCC, 0 0 0 #CCC;
+}
+input.formBtn02:active {
+	background: #ccc;
+}
+
+
+/* ----------------------------------------
+
+- Text Style
+
+---------------------------------------- */
+.lead {
+	margin-bottom: 20px;
+}
+.formTbl01 .note01 {
+	margin-top: 5px;
+	font-size: 83.4%;
+	color: #715e5e;
+}
+form .note01{
+	margin-top: 5px;
+	font-size: 83.4%;
+	color: #715e5e;
+}
+
+
+/* ----------------------------------------
+
+clearfix
+
+---------------------------------------- */
+
+/* Modern Browsers
+------------------------------- */
+.flowBar01:after,
+#inquiry:after {
+	display: block;
+	visibility: hidden;
+	clear: both;
+	height: 0;
+	content: ".";
+	line-height: 0;
+}
+
+/* Legacy IE
+------------------------------- */
+.flowBar01,
+#inquiry {
+	*zoom: 1;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja" class="noJS">
+
+<head>
+
+<meta charset="utf-8">
+<meta name="Description" content="">
+<meta name="Keywords" content=",">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=10.0, user-scalable=yes">
+
+<link rel="stylesheet" type="text/css" href="../basic_html/files/css/common/import.css" media="tv,screen,print">
+<link rel="stylesheet" type="text/css" href="../basic_html/files/css/common/print.css" media="print">
+
+<title>ページタイトル</title>
+
+<script src="../basic_html/files/js/jquery.js"></script>
+<script src="../basic_html/files/js/common.js"></script>
+
+<!-- ライトボックス -->
+<link rel="stylesheet" href="js/photoswipe/photoswipe.css">
+<script src="js/photoswipe/jquery.photoswipe.js"></script>
+<script>
+$(function(){
+	$('a.swipe').photoSwipe();
+});
+</script>
+
+</head>
+
+<body>
+
+<!-- container -->
+<div id="container">
+
+<!-- content -->
+<div id="content" style="padding:20px;">
+<div id="main">
+
+	<div class="mgb20">
+	<pre>
+&lt;link rel="stylesheet" href="js/photoswipe/photoswipe.css"&gt;
+&lt;script src="js/photoswipe/jquery.photoswipe.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+$(function(){
+	$('a.swipe').photoSwipe();
+});
+&lt;/script&gt;</pre>
+	</div>
+	<div class="mgb20">
+	<pre>
+&lt;a href="拡大画像パス" class="swipe" rel="group1" title="コメント"&gt;&lt;img src="画像パス" width="200" alt=""&gt;&lt;/a&gt;</pre>
+	</div>
+
+	<p><a href="dummy1.jpg" class="swipe" rel="group1" title="コメント"><img src="dummy1.jpg" width="200" alt=""></a>
+	　
+	<a href="dummy2.jpg" class="swipe" rel="group1"><img src="dummy2.jpg" width="200" alt=""></a></p>
+
+	<p class="mgt20">
+		参考：
+		<a href="http://free-jquery.com/" target="_blank">http://free-jquery.com/</a>
+	</p>
+
+</div>
+<div id="sub"></div>
+
+</div>
+<!-- /content -->
+
+</div>
+<!-- /container -->
+<script src="../template.js"></script>
+<link rel="stylesheet" type="text/css" href="../template.css" media="all">
+<script>
+$(function(){
+	function changecode() {
+		var elm = $('.auto-gen-code-snippet');
+		if (elm.length > 0) {
+			var html = elm.html().replace(/ cboxElement/g,'');
+			elm.html(html);
+		} else {
+			setTimeout(changecode, 500);
+		}
+	}
+	changecode();
+});
+</script>
+</body>
+
+</html>

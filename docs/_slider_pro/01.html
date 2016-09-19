@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ja" class="noJS">
+
+<head>
+
+<meta charset="utf-8">
+<meta name="Description" content="">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes">
+
+<link rel="stylesheet" type="text/css" href="../basic_html/files/css/common/import.css" media="all">
+<link rel="stylesheet" type="text/css" href="../../RSP/basic_html/files/css/common/import.css" media="all">
+
+<title>スライダー</title>
+
+<script src="../basic_html/files/js/jquery.js"></script>
+<script src="../basic_html/files/js/common.js"></script>
+
+<script src="slider-pro/jquery.sliderPro.min.js"></script>
+<link rel="stylesheet" type="text/css" href="slider-pro/slider-pro.css" media="all">
+
+<script>
+$(function(){
+	$('#kvSlider').sliderPro({
+		width: 1080,
+		aspectRatio:2.4,
+		arrows: true,
+		buttons: true,
+		waitForLayers: true,
+		fade: false,
+		autoplay: true,
+		autoplayDelay: 5000,
+		autoplayOnHover: 'none',
+		autoScaleLayers: false,
+		keyboard: false,
+		loop: true,
+		slideDistance: 20,
+		slideAnimationDuration: 700,
+		visibleSize: '100%',
+		fadeArrows: false,
+		breakpoints: {
+			767: {
+				width: "92%",
+				aspectRatio:1.809672386895476,
+				forceSize: 'fullWidth'
+			}
+		}
+	});
+});
+</script>
+<style>
+
+/* keyVisual
+------------------------------- */
+.keyVisual {
+	position: relative;
+	height: 480px;
+}
+.keyVisual .slider-pro {
+	opacity: 0;
+}
+.keyVisual .slider-pro.sp-horizontal {
+	opacity: 1;
+}
+.keyVisual .sp-arrow {
+	width: 50px;
+	height: 50px;
+	z-index: 10;
+}
+.keyVisual .sp-arrows .sp-previous-arrow { left: 20px; }
+.keyVisual .sp-arrows .sp-next-arrow { right: 20px; }
+.keyVisual .sp-arrow:before,
+.keyVisual .sp-arrow:after {
+	-webkit-transform: none;
+	-ms-transform: none;
+	-o-transform: none;
+	transform: none;
+}
+.keyVisual .sp-arrow:before {
+	-webkit-transition: all .2s ease;
+	-o-transition: all .2s ease;
+	transition: all .2s ease;
+	left: 35%;
+	top: 25%;
+	z-index: 10;
+	content: '';
+	display: block;
+	background-color: transparent;
+	color: #fff;
+	font-family: 'FontAwesome';
+	font-size: 16px;
+}
+.keyVisual .sp-previous-arrow:before {
+	content: "\f053";
+}
+.keyVisual .sp-next-arrow:before {
+	content: "\f054";
+	left: 41%;
+}
+.keyVisual .sp-previous-arrow:hover:before {left: 30%;}
+.keyVisual .sp-next-arrow:hover:before {left: 46%;}
+.keyVisual .sp-arrow:after {
+	left: 3.5px;
+	top: 3.5px;
+	content: '';
+	width: 42px;
+	height: 42px;
+	display: block;
+	background: #00ab8c;
+	border-radius: 100%;
+}
+.keyVisual .sp-buttons {
+	height: 14px;
+	padding-top: 15px;
+}
+.keyVisual .sp-button {
+	border: none;
+	background: #ccc;
+	width: 14px;
+	height: 14px;
+	margin: 0 5px 0 6px;
+	vertical-align: top;
+}
+.keyVisual .sp-selected-button {
+	background: #00ab8c;
+}
+@media screen and (max-width:767px){
+	.keyVisual {
+		overflow: hidden;
+		height: auto;
+		padding-top: 13px;
+		z-index: 1;
+	}
+	.keyVisual .sp-arrow {
+		width: 26px;
+		height: 26px;
+		-webkit-background-size: 25px auto;
+		background-size: 25px auto;
+	}
+	.keyVisual .sp-arrow:before {
+		font-size:10px;
+		width: 5px;
+		height: 9px;
+		top: 21%;
+	}
+	.keyVisual .sp-arrow.sp-previous-arrow:before {left: 31%;}
+	.keyVisual .sp-next-arrow:before {left: 38%;}
+	.keyVisual .sp-arrow:after {
+		width: 21px;
+		height: 21px;
+		left: 2px;
+		top: 2px;
+	}
+	.keyVisual .sp-previous-arrow:hover:before {left: 33%;}
+	.keyVisual .sp-next-arrow:hover:before {left: 43%;}
+	.keyVisual .sp-arrows .sp-previous-arrow { left: 3px; }
+	.keyVisual .sp-arrows .sp-next-arrow { right: 3px; }
+	.keyVisual .sp-image-container {
+	}
+	.keyVisual .sp-image {
+		margin: 0 !important;
+		height: auto !important;
+		width: 100% !important;
+	}
+	.keyVisual .sp-buttons {
+		padding-top: 7px;
+		height: 8px;
+	}
+	.keyVisual .sp-button {
+		width: 8px;
+		height: 8px;
+		margin: 0 3px;
+	}
+}
+</style>
+
+</head>
+
+<body>
+<div id="container">
+
+<div class="keyVisual">
+	<div id="kvSlider" class="slider-pro">
+		<div class="sp-slides">
+			<div class="sp-slide">
+				<a href=""><img class="sp-image" src="dummy_img/mv01.jpg" data-small="dummy_img/mv01_sp.jpg" data-medium="dummy_img/mv01_sp.jpg" alt=""></a>
+			</div>
+			<div class="sp-slide">
+				<a href=""><img class="sp-image" src="dummy_img/mv02.jpg" data-small="dummy_img/mv02_sp.jpg" data-medium="dummy_img/mv02_sp.jpg" alt=""></a>
+			</div>
+			<div class="sp-slide">
+				<a href=""><img class="sp-image" src="dummy_img/mv03.jpg" data-small="dummy_img/mv03_sp.jpg" data-medium="dummy_img/mv03_sp.jpg" alt=""></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div style="width: 90%;margin: 0 auto;">
+<div class="mgb20">
+	<p><b>注意</b></p>
+	<p>Android4.0.4で、ヘッダー固定にしている場合、左右のナビがMVの下にもぐってしまうことがありました。（岩倉自動車教習所）<br>
+	slider proのせいか、ナビのところの背景にsvgを使用しているのも原因の可能性があります。<br>
+	新しい機種では問題ありませんでした。</p>
+</div>
+<p><b>js,cssを読み込ませる</b></p>
+<pre><code>&lt;script src="slider-pro/jquery.sliderPro.min.js"&gt;&lt;/script&gt;
+&lt;link rel="stylesheet" type="text/css" href="slider-pro/slider-pro.css" media="all"&gt;
+</code></pre>
+
+<p class="mgt20"><b>html</b></p>
+<p class="mgt5">PC用画像をsrc属性に、スマホ用画像をdata-smallとdata-medium属性に入れてください。</p>
+<div>
+	<pre><code>&lt;div class="keyVisual"&gt;
+	&lt;div id="kvSlider" class="slider-pro"&gt;
+		&lt;div class="sp-slides"&gt;
+			&lt;div class="sp-slide"&gt;
+				&lt;a href=""&gt;&lt;img class="sp-image" src="dummy_img/mv01.jpg" data-small="dummy_img/mv01_sp.jpg" data-medium="dummy_img/mv01_sp.jpg" alt=""&gt;&lt;/a&gt;
+			&lt;/div&gt;
+			&lt;div class="sp-slide"&gt;
+				&lt;a href=""&gt;&lt;img class="sp-image" src="dummy_img/mv02.jpg" data-small="dummy_img/mv02_sp.jpg" data-medium="dummy_img/mv02_sp.jpg" alt=""&gt;&lt;/a&gt;
+			&lt;/div&gt;
+			&lt;div class="sp-slide"&gt;
+				&lt;a href=""&gt;&lt;img class="sp-image" src="dummy_img/mv03.jpg" data-small="dummy_img/mv03_sp.jpg" data-medium="dummy_img/mv03_sp.jpg" alt=""&gt;&lt;/a&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+	</code></pre>
+</div>
+
+<p class="mgt20"><b>js</b></p>
+<div>
+	<pre><code>$(function(){
+	$('#kvSlider').sliderPro({
+		width: 1080,
+		aspectRatio:2.4,
+		arrows: true,
+		buttons: true,
+		waitForLayers: true,
+		fade: false,
+		autoplay: true,
+		autoplayDelay: 5000,
+		autoplayOnHover: 'none',
+		autoScaleLayers: false,
+		keyboard: false,
+		loop: true,
+		slideDistance: 20,
+		slideAnimationDuration: 700,
+		visibleSize: '100%',
+		fadeArrows: false,
+		breakpoints: {
+			767: {
+				width: "92%",
+				aspectRatio:1.809672386895476,
+				forceSize: 'fullWidth'
+			}
+		}
+	});
+});
+	</code></pre>
+</div>
+
+<p class="mgt20"><b>css</b></p>
+<div>
+	<pre><code>
+/* keyVisual
+------------------------------- */
+.keyVisual {
+	position: relative;
+	height: 480px;
+}
+.keyVisual .slider-pro {
+	opacity: 0;
+}
+.keyVisual .slider-pro.sp-horizontal {
+	opacity: 1;
+}
+.keyVisual .sp-arrow {
+	width: 50px;
+	height: 50px;
+	z-index: 10;
+}
+.keyVisual .sp-arrows .sp-previous-arrow { left: 20px; }
+.keyVisual .sp-arrows .sp-next-arrow { right: 20px; }
+.keyVisual .sp-arrow:before,
+.keyVisual .sp-arrow:after {
+	-webkit-transform: none;
+	-ms-transform: none;
+	-o-transform: none;
+	transform: none;
+}
+.keyVisual .sp-arrow:before {
+	-webkit-transition: all .2s ease;
+	-o-transition: all .2s ease;
+	transition: all .2s ease;
+	left: 35%;
+	top: 25%;
+	z-index: 10;
+	content: '';
+	display: block;
+	background-color: transparent;
+	color: #fff;
+	font-family: 'FontAwesome';
+	font-size: 16px;
+}
+.keyVisual .sp-previous-arrow:before {
+	content: "\f053";
+}
+.keyVisual .sp-next-arrow:before {
+	content: "\f054";
+	left: 41%;
+}
+.keyVisual .sp-previous-arrow:hover:before {left: 30%;}
+.keyVisual .sp-next-arrow:hover:before {left: 46%;}
+.keyVisual .sp-arrow:after {
+	left: 3.5px;
+	top: 3.5px;
+	content: '';
+	width: 42px;
+	height: 42px;
+	display: block;
+	background: #00ab8c;
+	border-radius: 100%;
+}
+.keyVisual .sp-buttons {
+	height: 14px;
+	padding-top: 15px;
+}
+.keyVisual .sp-button {
+	border: none;
+	background: #ccc;
+	width: 14px;
+	height: 14px;
+	margin: 0 5px 0 6px;
+	vertical-align: top;
+}
+.keyVisual .sp-selected-button {
+	background: #00ab8c;
+}
+@media screen and (max-width:767px){
+	.keyVisual {
+		overflow: hidden;
+		height: auto;
+		padding-top: 13px;
+		z-index: 1;
+	}
+	.keyVisual .sp-arrow {
+		width: 26px;
+		height: 26px;
+		-webkit-background-size: 25px auto;
+		background-size: 25px auto;
+	}
+	.keyVisual .sp-arrow:before {
+		font-size:10px;
+		width: 5px;
+		height: 9px;
+		top: 21%;
+	}
+	.keyVisual .sp-arrow.sp-previous-arrow:before {left: 31%;}
+	.keyVisual .sp-next-arrow:before {left: 38%;}
+	.keyVisual .sp-arrow:after {
+		width: 21px;
+		height: 21px;
+		left: 2px;
+		top: 2px;
+	}
+	.keyVisual .sp-previous-arrow:hover:before {left: 33%;}
+	.keyVisual .sp-next-arrow:hover:before {left: 43%;}
+	.keyVisual .sp-arrows .sp-previous-arrow { left: 3px; }
+	.keyVisual .sp-arrows .sp-next-arrow { right: 3px; }
+	.keyVisual .sp-image-container {
+	}
+	.keyVisual .sp-image {
+		margin: 0 !important;
+		height: auto !important;
+		width: 100% !important;
+	}
+	.keyVisual .sp-buttons {
+		padding-top: 7px;
+		height: 8px;
+	}
+	.keyVisual .sp-button {
+		width: 8px;
+		height: 8px;
+		margin: 0 3px;
+	}
+}
+	</code></pre>
+</div>
+
+<p class="mgt20"><b>ドキュメント</b></p>
+<p><a href="https://github.com/bqworks/slider-pro/blob/master/README.md" target="_blank">https://github.com/bqworks/slider-pro/blob/master/README.md</a></p>
+<p><a href="http://on-ze.com/archives/2717" target="_blank">http://on-ze.com/archives/2717</a></p>
+<p><a href="http://gimmicklog.main.jp/jquery/549/" target="_blank">http://gimmicklog.main.jp/jquery/549/</a></p>
+
+</div>
+<link rel="stylesheet" type="text/css" href="../template.css" media="all">
+
+</div><!-- /container -->
+</body>
+</html>

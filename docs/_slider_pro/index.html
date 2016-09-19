@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ja" class="noJS">
+
+<head>
+
+<meta charset="utf-8">
+<meta name="Description" content="">
+<meta name="Keywords" content=",">
+
+<link rel="stylesheet" type="text/css" href="../basic_html/files/css/common/import.css" media="all">
+
+<title>スライダー</title>
+
+<script src="../basic_html/files/js/jquery.js"></script>
+<script src="../basic_html/files/js/common.js"></script>
+
+<script src="slider-pro/jquery.sliderPro.min.js"></script>
+<link rel="stylesheet" type="text/css" href="slider-pro/slider-pro.css" media="all">
+
+<style>
+#content {
+	overflow: visible !important;
+}
+</style>
+
+</head>
+
+
+<body>
+
+<!-- container -->
+<div id="container">
+
+<!-- content -->
+<div id="content">
+	<div id="main">
+
+<div class="slider-pro" id="my-slider">
+	<div class="sp-slides">
+		<div class="sp-slide">
+				<img class="sp-image" src="../basic_html/files/img/dummy/img02.png">
+		</div>
+		<div class="sp-slide">
+				<p>Lorem ipsum dolor sit amet</p>
+		</div>
+		<div class="sp-slide">
+				<h3 class="sp-layer">Lorem ipsum dolor sit amet</h3>
+				<p class="sp-layer">consectetur adipisicing elit</p>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+$(function(){
+	$('#my-slider').sliderPro({
+		width: 960,
+		height: 500,
+		arrows: true,
+		buttons: true,
+		waitForLayers: true,
+		fade: false,
+		autoplay: true,
+		autoplayDelay: 5000,
+		autoplayOnHover: 'none',
+		autoScaleLayers: false,
+		keyboard: false,
+		loop: true,
+		slideDistance: 0,
+		slideAnimationDuration: 700,
+		breakpoints: {
+			800: {
+				thumbnailsPosition: 'bottom',
+				thumbnailWidth: 270,
+				thumbnailHeight: 100
+			}
+		}
+	});
+});
+</script>
+
+
+<p><b>js,cssを読み込ませる</b></p>
+<pre><code>&lt;script src="slider-pro/jquery.sliderPro.min.js"&gt;&lt;/script&gt;
+&lt;link rel="stylesheet" type="text/css" href="slider-pro/slider-pro.css" media="all"&gt;
+</code></pre>
+
+<p class="mgt20"><b>html</b></p>
+<div>
+	<pre><code>&lt;div class="slider-pro" id="my-slider"&gt;
+	&lt;div class="sp-slides"&gt;
+		&lt;div class="sp-slide"&gt;
+				&lt;img class="sp-image" src="../basic_html/files/img/dummy/img02.png"&gt;
+		&lt;/div&gt;
+		&lt;div class="sp-slide"&gt;
+				&lt;p&gt;Lorem ipsum dolor sit amet&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div class="sp-slide"&gt;
+				&lt;h3 class="sp-layer"&gt;Lorem ipsum dolor sit amet&lt;/h3&gt;
+				&lt;p class="sp-layer"&gt;consectetur adipisicing elit&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+	</code></pre>
+</div>
+
+<p class="mgt20"><b>js</b></p>
+<div>
+	<pre><code>$(function(){
+	$('#my-slider').sliderPro({
+		width: 960,
+		height: 500,
+		arrows: true,
+		buttons: true,
+		waitForLayers: true,
+		fade: false,
+		autoplay: true,
+		autoplayDelay: 5000,
+		autoplayOnHover: 'none',
+		autoScaleLayers: false,
+		keyboard: false,
+		loop: true,
+		slideDistance: 0,
+		slideAnimationDuration: 700,
+		breakpoints: {
+			800: {
+				thumbnailsPosition: 'bottom',
+				thumbnailWidth: 270,
+				thumbnailHeight: 100
+			}
+		}
+	});
+});
+	</code></pre>
+</div>
+
+<p class="mgt20"><b>ドキュメント</b></p>
+<p><a href="https://github.com/bqworks/slider-pro/blob/master/README.md" target="_blank">https://github.com/bqworks/slider-pro/blob/master/README.md</a></p>
+<p><a href="http://on-ze.com/archives/2717" target="_blank">http://on-ze.com/archives/2717</a></p>
+<p><a href="http://gimmicklog.main.jp/jquery/549/" target="_blank">http://gimmicklog.main.jp/jquery/549/</a></p>
+
+	</div>
+	<div id="sub"></div>
+</div>
+<!-- /content -->
+
+
+</div>
+
+<!-- /container -->
+<script src="../template.js"></script>
+<link rel="stylesheet" type="text/css" href="../template.css" media="all">
+
+</body>
+
+</html>
